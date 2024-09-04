@@ -2,11 +2,12 @@
     export let showJobs = false;
     export let showProjects = false;
     export let showSocials = false;
-
+    let element = null;
     function handleJobs() {
         showJobs = !showJobs;
         showProjects = false;
         showSocials = false;
+        element.classList.add('selected');
         showSomething()
     }
 
@@ -43,34 +44,33 @@
     <div class="sections">
         <!-- create element design for listing out things; card/link style -->
         <button on:click={handleJobs}>
-            <p>my jobs</p>
-            <p>{showJobs}</p>
+            <p bind:this={element}>my jobs</p>
         </button>
         <button on:click={handleProjects}>
             <p>my projects</p>
-            <p>{showProjects}</p>
         </button>
         <button on:click={handleSocials}>
             <p>my socials</p>
-            <p>{showSocials}</p>
-            <p>{something}</p>
+        </button>
+        <button>
+            <a href="/layout">my socials</a>
         </button>
     </div>
 
     {#if showJobs }
-        <ul>
+        <ul class="navContainer">
             <li>
                 <a href="binaryconfidence.com">QA Lead @ Binary Confidence</a>
             </li>
         </ul>
     {:else if showProjects}
-        <ul>
+        <ul class="navContainer">
             <li>
                 BottleBuddy
             </li>
         </ul>
     {:else if showSocials}
-        <ul>
+        <ul class="navContainer">
             <li>
                 <a href="https://github.com/Baarneeyy">github: u/Baarneeyy</a>
             </li>
@@ -109,3 +109,38 @@
         </ul>
     </div>
 </main>
+
+<style>
+    * {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+               
+    }
+
+    .header {
+        text-align: start;
+        width: 100%;
+    }
+
+    .mainsec {
+        width: 100%;
+        text-align: end;
+        padding-right: 30%;
+        padding-top: 5%;
+    }
+
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    .navContainer {
+        border: solid black 3px;
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+    }
+</style>
