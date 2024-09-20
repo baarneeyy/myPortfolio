@@ -47,7 +47,7 @@
             </div>
         </header>
         <div class="buttonNav">
-            <button on:click={handleJobs}>
+            <button class="btn" on:click={handleJobs}>
                 <p>my jobs</p>
             </button>
             <button on:click={handleProjects}>

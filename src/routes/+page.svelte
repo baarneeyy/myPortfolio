@@ -1,4 +1,6 @@
 <script>
+    import "../app.css";
+
     export let showJobs = false;
     export let showProjects = false;
     export let showSocials = false;
@@ -41,6 +43,7 @@
     <div class="mainsec">
         <h1>i <s>(break)</s> make stuff</h1>
     </div>
+    <div class="text-3xl font-bold underline">Abeceda</div>
     <div class="sections">
         <!-- create element design for listing out things; card/link style -->
         <button on:click={handleJobs}>
@@ -110,7 +113,7 @@
     </div>
 </main>
 
-<style>
+<style lang="postcss">
     * {
         font-family: Georgia, 'Times New Roman', Times, serif;
                
