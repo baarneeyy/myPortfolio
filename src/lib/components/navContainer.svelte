@@ -2,6 +2,11 @@
     export let jobs;
     export let projects;
     export let socials;
+
+    export let showProject = true;
+
+    import ProjectCard from "./projectCard.svelte";
+
 </script>
 
 <main>
@@ -14,8 +19,11 @@
     {:else if projects}
         <ul class="navContainer">
             <li>
-                BottleBuddy
+                <button on:click={() => showProject = !showProject}>BottleBuddy</button>
             </li>
+            {#if showProject}
+                <ProjectCard />
+            {/if}
         </ul>
     {:else if socials}
         <ul class="navContainer">

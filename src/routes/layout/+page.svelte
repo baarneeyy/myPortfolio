@@ -43,7 +43,7 @@
             </div>
             <div>
                 <h1>Tomi</h1>
-                <p>now what is this</p>
+                <p>hello there :&rbrack;</p>
             </div>
         </header>
         <div class="buttonNav">
