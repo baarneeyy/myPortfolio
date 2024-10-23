@@ -1,10 +1,14 @@
 <script>
     import NavContainer from "../../lib/components/navContainer.svelte";
+    import InfoCard from "../../lib/components/infoCard.svelte";
     import { fade } from 'svelte/transition';
     
     export let showJobs = false;
     export let showProjects = false;
     export let showSocials = false;
+    export let showInfo = false;
+
+    export let infoBtnIcon = '+'
 
     function handleJobs() {
         showJobs = !showJobs;
@@ -25,6 +29,16 @@
         showJobs = false;
         showProjects = false;
         showSomething()
+    }
+
+    function handleInfo() {
+        showInfo = !showInfo;
+        if (infoBtnIcon == "+") {
+            infoBtnIcon = '-'
+        } else if (infoBtnIcon == '-') {
+            infoBtnIcon = '+'
+        }
+
     }
 
     export let something = false;
@@ -76,7 +90,13 @@
                 </div>
             {/if}
         {:else}
-            <h1 transition:fade>i <s>(break)</s> make stuff</h1>
+            <div>
+                <h1 transition:fade>i <s>(break)</s> make stuff</h1>
+                <button on:click={handleInfo}>{infoBtnIcon}</button>
+                {#if showInfo}
+                    <InfoCard />
+                {/if}
+            </div>
         {/if}
     </div>
 </main>

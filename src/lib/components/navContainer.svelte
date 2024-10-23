@@ -3,7 +3,7 @@
     export let projects;
     export let socials;
 
-    export let showProject = true;
+    export let showProject = false;
 
     import ProjectCard from "./projectCard.svelte";
 
