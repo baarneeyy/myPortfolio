@@ -1,5 +1,6 @@
 <script>
     import NavContainer from "../../lib/components/navContainer.svelte";
+    import { fade } from 'svelte/transition';
     
     export let showJobs = false;
     export let showProjects = false;
@@ -61,9 +62,21 @@
     </div>
     <div class="mainSection contentSide">
         {#if something}
-            <NavContainer jobs={showJobs} projects={showProjects} socials={showSocials}/>
+            {#if showJobs}
+                <div transition:fade>
+                    <NavContainer jobs={showJobs} />
+                </div>
+            {:else if showProjects}
+                <div transition:fade>
+                    <NavContainer projects={showProjects}/>
+                </div>
+            {:else if showSocials} 
+                <div transition:fade>
+                    <NavContainer socials={showSocials}/>
+                </div>
+            {/if}
         {:else}
-            <h1>i <s>(break)</s> make stuff</h1>
+            <h1 transition:fade>i <s>(break)</s> make stuff</h1>
         {/if}
     </div>
 </main>
