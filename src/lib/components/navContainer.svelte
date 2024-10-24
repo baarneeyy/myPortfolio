@@ -1,11 +1,12 @@
 <script>
+    import ProjectCard from "./projectCard.svelte";
+    import { fade } from "svelte/transition";
+
     export let jobs;
     export let projects;
     export let socials;
 
     export let showProject = false;
-
-    import ProjectCard from "./projectCard.svelte";
 
 </script>
 
@@ -22,7 +23,9 @@
                 <button on:click={() => showProject = !showProject}>BottleBuddy</button>
             </li>
             {#if showProject}
-                <ProjectCard />
+                <div transition:fade>
+                    <ProjectCard />
+                </div>
             {/if}
         </ul>
     {:else if socials}
