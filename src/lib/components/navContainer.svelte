@@ -10,6 +10,8 @@
 
     import "../../app.css";
 
+    //TODO -> IMPLEMENT PROJECT FILTER/SEARCH
+
 </script>
 
 <main>
