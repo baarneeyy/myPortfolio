@@ -1,5 +1,5 @@
 <main>
-    <div>
-        <h1>Hello</h1>
+    <div class="text-3xl md:text-4xl font-semibold">
+        <h1>Hello There</h1>
     </div>
 </main>

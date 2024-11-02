@@ -2,8 +2,9 @@
     import NavContainer from "../../lib/components/navContainer.svelte";
     import InfoCard from "../../lib/components/infoCard.svelte";
     import { fade } from 'svelte/transition';
-    import "../../static/fonts/data-latin.ttf"
-    
+
+    import '@fontsource-variable/roboto-slab';
+
     export let showJobs = false;
     export let showProjects = false;
     export let showSocials = false;
@@ -63,15 +64,9 @@
             </div>
         </header>
         <div class="buttonNav">
-            <button on:click={handleJobs} class="btn btn-primary">
-                <p>my jobs</p>
-            </button>
-            <button on:click={handleProjects} class="btn btn-primary">
-                <p>my projects</p>
-            </button>
-            <button on:click={handleSocials} class="btn btn-primary">
-                <p>my socials</p>
-            </button>
+            <button on:click={handleJobs} class="btn btn-primary">my jobs</button>
+            <button on:click={handleProjects} class="btn btn-secondary">my projects</button>
+            <button on:click={handleSocials} class="btn btn-primary">my socials</button>
         </div>
         <p class="check">{something}</p>
     </div>
@@ -91,9 +86,9 @@
                 </div>
             {/if}
         {:else}
-            <div>
-                <h1 transition:fade>i <s>(break)</s> make stuff</h1>
-                <button on:click={handleInfo}>{infoBtnIcon}</button>
+            <div class="hero-content hero-holder">
+                <h1 transition:fade class="text-4xl md:text-5xl font-bold">i <s>(break)</s> make stuff</h1>
+                <button on:click={handleInfo} class="btn btn-secondary">{infoBtnIcon}</button>
                 {#if showInfo}
                     <InfoCard />
                 {/if}
@@ -104,12 +99,12 @@
 
 <style>
     * {
-        background-color: #FFF1DB;
-        font-family: 'data';
+        font-family: 'Roboto Slab', sans-serif;
     }
 
     main {
         display: flex;
+        font-family: 'Roboto Slab', serif;
     }
     
     .mainSection {
@@ -134,8 +129,9 @@
         justify-content: center;
     }
 
-    button {
-        color: #16198A;
+    .hero-holder {
+        display: flex;
+        flex-direction: column;
     }
 
     header {
@@ -148,12 +144,13 @@
         text-align: center;
     }
 
-    
+    /* roboto-slab-latin-400-normal */
     @font-face {
-    font-family: 'data';
-    src: url('../../static/fonts/data-latin.ttf') format('ttf');
-    font-weight: 400;
-    font-style: normal;
+        font-family: 'Roboto Slab';
+        font-style: normal;
+        font-display: swap;
+        font-weight: 400;
+        src: url(https://cdn.jsdelivr.net/fontsource/fonts/roboto-slab@latest/latin-400-normal.woff2) format('woff2'), url(https://cdn.jsdelivr.net/fontsource/fonts/roboto-slab@latest/latin-400-normal.woff) format('woff');
+        unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
     }
-
 </style>

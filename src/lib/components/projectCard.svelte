@@ -1,21 +1,25 @@
+<script>
+    let props = $props();
+</script>
+
 <main class="collapse">
-    <input type="checkbox" />
-    <div class="collapse-title">TEST</div>
-    <div class="collapse-content">
-        <h1>Project name</h1>
-        <p>Project Stack</p>
-        <ul>
-            <li>react-native</li>
-            <li>expo</li>
-            <li>pocketbase</li>
-        </ul>
+    <input type="radio" name={props.name} checked={props.checked}/>
+    <div class="collapse-title text-4xl md:text-5xl font-bold text-center">BottleBuddy</div>
+    <div class="collapse-content text-base md:text-lg leading-relaxed mt-4">
+        <p class="text-xl md:text-2xl font-medium mt-4">Project Stack:</p>
+        <div class="projectStack">
+            <div class="badge">react-native</div>
+            <div class="badge">expo</div>
+            <div class="badge">pocketbase</div>
+        </div>
         <a href="https://google.com/">Type: mobile app</a>
-        <p>
+        <p class="text-xl md:text-2xl font-medium mt-4">Description:</p>
+        <p class="description">
             Wolt-like delivery&pickup app for plastic bottles
         </p>
         <div>
-            <button>ProjectSite</button>
-            <button>MoreInfo</button>
+            <button class="btn">ProjectSite</button>
+            <button class="btn">MoreInfo</button>
         </div>
     </div>
 </main>
@@ -28,7 +32,17 @@
         border-color: #3D593B;
     }
 
-    h1 {
+    .collapse-content {
+        margin-left: 2vw;
+    }
 
+    .projectStack {
+        margin-left: 2vw;
+        margin-top: 1vh
+    }
+
+    .description {
+        margin-left: 2vw;
+        margin-top: 1vh
     }
 </style>

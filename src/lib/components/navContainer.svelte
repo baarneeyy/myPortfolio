@@ -1,29 +1,33 @@
 <script>
     import ProjectCard from "./projectCard.svelte";
+    import Modal from "./modal.svelte";
     import { fade } from "svelte/transition";
 
-    export let jobs;
-    export let projects;
-    export let socials;
+
+    let props = $props();
+
+    let showModal = $state(false);
 
     import "../../app.css";
 
 </script>
 
 <main>
-    {#if jobs }
+    {#if props.jobs }
         <ul class="navContainer">
             <li>
                 <a href="binaryconfidence.com">QA Lead @ Binary Confidence</a>
             </li>
         </ul>
-    {:else if projects}
+    {:else if props.projects}
         <ul class="navContainer">
             <div transition:fade>
-                <ProjectCard />
+                <ProjectCard name="projects" checked="checked"/>
+                <ProjectCard name="projects"/>
+                <ProjectCard name="projects"/>
             </div>
         </ul>
-    {:else if socials}
+    {:else if props.socials}
         <ul class="navContainer">
             <li>
                 <a href="https://github.com/Baarneeyy">github: u/Baarneeyy</a>
@@ -32,5 +36,7 @@
                 <a href="mailto:tom.vseteckaa@gmail.com">mail: tom.vseteckaa@gmail.com</a>
             </li>
         </ul>
+        <button class="btn" onclick={() => (showModal = true)}>open modal</button>
+        <Modal bind:showModal/>
     {/if}
 </main>

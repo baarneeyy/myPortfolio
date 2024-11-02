@@ -38,53 +38,11 @@
 <main>
     <div class="header">
         <div>insert img l8r</div>
-        <a href="/"> / Tomi</a>
+        <a href="/layout/"> / New Layout</a>
     </div>
-    <div class="mainsec">
-        <h1>i <s>(break)</s> make stuff</h1>
-    </div>
-    <div class="text-3xl font-bold underline">Abeceda</div>
-    <div class="sections">
-        <!-- create element design for listing out things; card/link style -->
-        <button on:click={handleJobs}>
-            <p bind:this={element}>my jobs</p>
-        </button>
-        <button on:click={handleProjects}>
-            <p>my projects</p>
-        </button>
-        <button on:click={handleSocials}>
-            <p>my socials</p>
-        </button>
-        <button>
-            <a href="/layout">my socials</a>
-        </button>
-    </div>
-
-    {#if showJobs }
-        <ul class="navContainer">
-            <li>
-                <a href="binaryconfidence.com">QA Lead @ Binary Confidence</a>
-            </li>
-        </ul>
-    {:else if showProjects}
-        <ul class="navContainer">
-            <li>
-                BottleBuddy
-            </li>
-        </ul>
-    {:else if showSocials}
-        <ul class="navContainer">
-            <li>
-                <a href="https://github.com/Baarneeyy">github: u/Baarneeyy</a>
-            </li>
-            <li>
-                <a href="mailto:tom.vseteckaa@gmail.com">mail: tom.vseteckaa@gmail.com</a>
-            </li>
-        </ul>
-    {/if}
-
+    <div class="text-3xl font-bold underline">Tomáš Všetečka</div>
     <div class="legalShit">
-        <h2>Tomáš Všetečka</h2>
+        <h2>živnostník</h2>
         <br>
         <h3>Služby</h3>
         <ol>
@@ -103,12 +61,6 @@
             <li>tel.č.: +421949082647</li>
             <li>IČO: 56022417</li>
             <li>Sídlo: Šášovská 3018/16, 85106 Bratislava</li>
-        </ul>
-        <h4>Todo</h4>
-        <ul>
-            <li>popisky ku "produktom"</li>
-            <li>view that changes based on the three top-side buttons</li>
-            <li>legal sk chujoviny pridať do mini card</li>
         </ul>
     </div>
 </main>
@@ -138,12 +90,5 @@
         align-items: center;
         text-align: center;
         width: 100%;
-    }
-
-    .navContainer {
-        border: solid black 3px;
-        display: flex;
-        flex-direction: column;
-        justify-items: center;
     }
 </style>
