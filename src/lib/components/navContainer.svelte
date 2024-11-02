@@ -6,7 +6,7 @@
     export let projects;
     export let socials;
 
-    export let showProject = false;
+    import "../../app.css";
 
 </script>
 
@@ -19,14 +19,9 @@
         </ul>
     {:else if projects}
         <ul class="navContainer">
-            <li>
-                <button on:click={() => showProject = !showProject}>BottleBuddy</button>
-            </li>
-            {#if showProject}
-                <div transition:fade>
-                    <ProjectCard />
-                </div>
-            {/if}
+            <div transition:fade>
+                <ProjectCard />
+            </div>
         </ul>
     {:else if socials}
         <ul class="navContainer">

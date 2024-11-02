@@ -2,6 +2,7 @@
     import NavContainer from "../../lib/components/navContainer.svelte";
     import InfoCard from "../../lib/components/infoCard.svelte";
     import { fade } from 'svelte/transition';
+    import "../../static/fonts/data-latin.ttf"
     
     export let showJobs = false;
     export let showProjects = false;
@@ -62,13 +63,13 @@
             </div>
         </header>
         <div class="buttonNav">
-            <button class="btn" on:click={handleJobs}>
+            <button on:click={handleJobs} class="btn btn-primary">
                 <p>my jobs</p>
             </button>
-            <button on:click={handleProjects}>
+            <button on:click={handleProjects} class="btn btn-primary">
                 <p>my projects</p>
             </button>
-            <button on:click={handleSocials}>
+            <button on:click={handleSocials} class="btn btn-primary">
                 <p>my socials</p>
             </button>
         </div>
@@ -102,12 +103,16 @@
 </main>
 
 <style>
+    * {
+        background-color: #FFF1DB;
+        font-family: 'data';
+    }
+
     main {
         display: flex;
     }
     
     .mainSection {
-        border: solid black 4px;
         width: 100vw;
         height: 100vh;
     }
@@ -129,6 +134,10 @@
         justify-content: center;
     }
 
+    button {
+        color: #16198A;
+    }
+
     header {
         display: flex;
         align-items: center;
@@ -140,4 +149,11 @@
     }
 
     
+    @font-face {
+    font-family: 'data';
+    src: url('../../static/fonts/data-latin.ttf') format('ttf');
+    font-weight: 400;
+    font-style: normal;
+    }
+
 </style>
