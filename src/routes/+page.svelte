@@ -76,13 +76,6 @@
         width: 100%;
     }
 
-    .mainsec {
-        width: 100%;
-        text-align: end;
-        padding-right: 30%;
-        padding-top: 5%;
-    }
-
 
     main {
         display: flex;

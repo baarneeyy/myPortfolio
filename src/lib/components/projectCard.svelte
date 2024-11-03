@@ -1,5 +1,13 @@
 <script>
+    import DiGithubBadge from 'svelte-icons/di/DiGithubBadge.svelte'
+    
     let props = $props();
+
+    let gitRepo = "https://github.com/Baarneeyy/BottleBuddy";
+
+    function gitClick() {
+        window.location.href = gitRepo;
+    }
 </script>
 
 <main class="collapse">
@@ -17,8 +25,14 @@
         <p class="description">
             Wolt-like delivery&pickup app for plastic bottles
         </p>
-        <div>
-            <button class="btn">ProjectSite</button>
+        <p class="text-xl md:text-2xl font-medium mt-4">Current Status:</p>
+        <p class="description">Develop & Implement Order screen -&gt ver0.1.0 done</p>
+        <div class="projectBtnBar">
+            <div>
+                <button class="btn" onclick={gitClick}>
+                    <DiGithubBadge />
+                </button>
+            </div>
             <button class="btn">MoreInfo</button>
         </div>
     </div>
@@ -44,5 +58,11 @@
     .description {
         margin-left: 2vw;
         margin-top: 1vh
+    }
+
+    .projectBtnBar {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 2vh;
     }
 </style>

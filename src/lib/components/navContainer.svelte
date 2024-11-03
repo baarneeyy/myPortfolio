@@ -18,7 +18,7 @@
     {#if props.jobs }
         <ul class="navContainer">
             <li>
-                <a href="binaryconfidence.com">QA Lead @ Binary Confidence</a>
+                <a href="https://binaryconfidence.com">QA Lead @ Binary Confidence</a>
             </li>
         </ul>
     {:else if props.projects}
