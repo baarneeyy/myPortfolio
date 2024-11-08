@@ -11,8 +11,8 @@
 </script>
 
 <main class="collapse">
-    <input type="radio" name={props.name} checked={props.checked}/>
-    <div class="collapse-title text-4xl md:text-5xl font-bold text-center">BottleBuddy</div>
+    <input type="checkbox" name={props.name} checked={props.checked}/>
+    <div class="collapse-title text-4xl md:text-5xl font-bold text-center">{props.name}</div>
     <div class="collapse-content text-base md:text-lg leading-relaxed mt-4">
         <p class="text-xl md:text-2xl font-medium mt-4">Project Stack:</p>
         <div class="projectStack">
@@ -20,10 +20,10 @@
             <div class="badge">expo</div>
             <div class="badge">pocketbase</div>
         </div>
-        <a href="https://google.com/">Type: mobile app</a>
+        <a href="https://google.com/">Type: {props.projectType}</a>
         <p class="text-xl md:text-2xl font-medium mt-4">Description:</p>
         <p class="description">
-            Wolt-like delivery&pickup app for plastic bottles
+            {props.description}
         </p>
         <p class="text-xl md:text-2xl font-medium mt-4">Current Status:</p>
         <p class="description">Develop & Implement Order screen -&gt ver0.1.0 done</p>

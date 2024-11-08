@@ -24,8 +24,18 @@
     {:else if props.projects}
         <ul class="navContainer">
             <div transition:fade>
-                <ProjectCard name="projects" checked="checked"/>
-                <ProjectCard name="projects"/>
+                <ProjectCard 
+                    name="BottleBuddy" 
+                    projectType="mobile app" 
+                    description="Wolt-like delivery&pickup app for plastic bottles"
+                    checked="checked"
+                
+                />
+                <ProjectCard 
+                    name="Maestro" 
+                    projectType="web-app"
+                    description="Utility website '100 gadgets' style"
+                />
                 <ProjectCard name="projects"/>
             </div>
         </ul>
