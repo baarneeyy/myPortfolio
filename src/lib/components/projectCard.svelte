@@ -3,7 +3,7 @@
     
     let props = $props();
 
-    let gitRepo = "https://github.com/Baarneeyy/BottleBuddy";
+    let gitRepo = props.repo;
 
     function gitClick() {
         window.location.href = gitRepo;
@@ -11,7 +11,7 @@
 </script>
 
 <main class="collapse">
-    <input type="checkbox" name={props.name} checked={props.checked}/>
+    <input type="radio" name={props.itemName} checked={props.checked}/>
     <div class="collapse-title text-4xl md:text-5xl font-bold text-center">{props.name}</div>
     <div class="collapse-content text-base md:text-lg leading-relaxed mt-4">
         <p class="text-xl md:text-2xl font-medium mt-4">Project Stack:</p>
