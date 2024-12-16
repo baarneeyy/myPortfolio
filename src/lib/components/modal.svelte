@@ -1,25 +1,29 @@
 <script>
-    let { showModal = $bindable() } = $props();
+  import QuillEditor from './quillEditor.svelte';
 
-    let dialog = $state(); //ModalElement
+  let { showModal = $bindable() } = $props();
 
-    $effect(() => {
-        if (showModal) dialog.showModal();
-    })
+  let dialog = $state(); //ModalElement
+
+  $effect(() => {
+      if (showModal) dialog.showModal();
+  })
 </script>
 
-<!-- Open the modal using ID.showModal() method -->
 <dialog id="Modal" class="modal" bind:this={dialog} 
     onclose={() => (showModal = false)} 
     onclick={(e) => { if (e.target === dialog) dialog.close(); }}
 >
   <div class="modal-box">
-    <h3 class="text-lg font-bold">Hello!</h3>
-    <p class="py-4">Press ESC key or click the button below to close</p>
+    <input type="text" placeholder="Email?" class="input input-bordered w-full max-w-xs" />
+    <input type="text" placeholder="Subject?" class="input input-bordered w-full max-w-xs mt-4" />
     <div class="modal-action">
       <form method="dialog">
-        <!-- if there is a button in form, it will close the modal -->
-        <button class="btn">Close</button>
+        <QuillEditor />
+        <div>
+          <button class="btn">Close</button>
+          <button class="btn btn-secondary">Send</button>
+        </div>
       </form>
     </div>
   </div>

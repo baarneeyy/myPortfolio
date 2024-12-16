@@ -52,49 +52,41 @@
 </script>
 
 <main>
-    <div class="mainSection controlSide">
-        <header>
-            <div class="header">
-                <div>insert img l8r</div>
-                <a href="/"> / Tomi</a>
-            </div>
-            <div>
-                <h1>Tomi</h1>
-                <p>hello there :&rbrack;</p>
-            </div>
-        </header>
-        <div class="buttonNav">
-            <button on:click={handleJobs} class="btn btn-primary">my jobs</button>
-            <button on:click={handleProjects} class="btn btn-secondary">my projects</button>
-            <button on:click={handleSocials} class="btn btn-primary">my socials</button>
-        </div>
-        <p class="check">{something}</p>
-    </div>
-    <div class="mainSection contentSide">
-        {#if something}
-            {#if showJobs}
-                <div transition:fade>
-                    <NavContainer jobs={showJobs} />
-                </div>
-            {:else if showProjects}
-                <div transition:fade>
-                    <NavContainer projects={showProjects}/>
-                </div>
-            {:else if showSocials} 
-                <div transition:fade>
-                    <NavContainer socials={showSocials}/>
+    <a href="/">/Tomi</a>
+    <div class="contentSide">
+        <div>
+            {#if something}
+                {#if showJobs}
+                    <div transition:fade>
+                        <NavContainer jobs={showJobs} />
+                    </div>
+                {:else if showProjects}
+                    <div transition:fade>
+                        <NavContainer projects={showProjects}/>
+                    </div>
+                {:else if showSocials} 
+                    <div transition:fade>
+                        <NavContainer socials={showSocials}/>
+                    </div>
+                {/if}
+            {:else}
+                <div class="hero-content hero-holder">
+                    <h1 transition:fade class="text-4xl md:text-5xl font-bold">i <s>(break)</s> make stuff</h1>
+                    <button on:click={handleInfo} class="btn btn-secondary">{infoBtnIcon}</button>
+                    {#if showInfo}
+                        <InfoCard />
+                    {/if}
                 </div>
             {/if}
-        {:else}
-            <div class="hero-content hero-holder">
-                <h1 transition:fade class="text-4xl md:text-5xl font-bold">i <s>(break)</s> make stuff</h1>
-                <button on:click={handleInfo} class="btn btn-secondary">{infoBtnIcon}</button>
-                {#if showInfo}
-                    <InfoCard />
-                {/if}
+        </div>
+        <div class="controlSide">
+            <div class="buttonNav">
+                <button on:click={handleJobs} class="btn btn-primary">my jobs</button>
+                <button on:click={handleProjects} class="btn btn-secondary">my projects</button>
+                <button on:click={handleSocials} class="btn btn-primary">my socials</button>
             </div>
-        {/if}
-    </div>
+        </div>
+    </div> 
 </main>
 
 <style>
@@ -103,23 +95,18 @@
     }
 
     main {
-        display: flex;
         font-family: 'Roboto Slab', serif;
-    }
-    
-    .mainSection {
         width: 100vw;
         height: 100vh;
     }
 
     .controlSide {
-        display: flex;
-        flex-direction: column;
         justify-content: space-around;
     }
 
     .contentSide {
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
     }
@@ -138,10 +125,6 @@
         display: flex;
         align-items: center;
         justify-content: space-around;
-    }
-
-    .check {
-        text-align: center;
     }
 
     /* roboto-slab-latin-400-normal */

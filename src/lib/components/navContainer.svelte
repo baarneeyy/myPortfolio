@@ -32,6 +32,8 @@
                     description="Wolt-like delivery&pickup app for plastic bottles"
                     checked="checked"
                     repo="https://github.com/Baarneeyy/BottleBuddy"
+                    stack = 'react-expo-pocketbase'
+                    descrip="Develop & Implement Order screen -&gt ver0.1.0 done"
                 
                 />
                 <ProjectCard 
@@ -40,24 +42,23 @@
                     projectType="web-app"
                     description="Utility website '100 gadgets' style"
                     repo="https://github.com/Baarneeyy/maestro"
-                />
-                <ProjectCard name="projects"
-                    itemName="project"
+                    stack = 'svelte'
+                    descrip="Create unit converter"
                 />
             </div>
         </ul>
     {:else if props.socials}
         <div class="btnPair">
-            <button class="btn btn-secondary mr-4">
+            <a class="btn btn-secondary mr-4" role="button" href="https://github.com/Baarneeyy">
                 <DiGithubBadge/>
-            </button>
-            <a class="btn" role="button" href="https://github.com/Baarneeyy">github: u/Baarneey</a>
+            </a>
+            <button class="btn" disabled="disabled">github: u/Baarneey</button>
         </div>
         <div class="btnPair">
-            <button class="btn btn-secondary mr-4">
+            <button class="btn btn-secondary mr-4" onclick={() => (showModal = true)}>
                 <GoInbox/>
             </button>
-            <button class="btn" onclick={() => (showModal = true)}>mail: tomas@vsetecka.sk</button>
+            <button class="btn" disabled="disabled">mail: tomas@vsetecka.sk</button>
         </div>
         <Modal bind:showModal/>
     {/if}

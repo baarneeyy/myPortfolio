@@ -5,6 +5,9 @@
 
     let gitRepo = props.repo;
 
+    let techStack = props.stack;
+    let stack1 = techStack.split('-');
+
     function gitClick() {
         window.location.href = gitRepo;
     }
@@ -16,9 +19,9 @@
     <div class="collapse-content text-base md:text-lg leading-relaxed mt-4">
         <p class="text-xl md:text-2xl font-medium mt-4">Project Stack:</p>
         <div class="projectStack">
-            <div class="badge">react-native</div>
-            <div class="badge">expo</div>
-            <div class="badge">pocketbase</div>
+            {#each stack1 as item}
+                <div class="badge">{item}</div>
+            {/each}
         </div>
         <a href="https://google.com/">Type: {props.projectType}</a>
         <p class="text-xl md:text-2xl font-medium mt-4">Description:</p>
@@ -26,14 +29,14 @@
             {props.description}
         </p>
         <p class="text-xl md:text-2xl font-medium mt-4">Current Status:</p>
-        <p class="description">Develop & Implement Order screen -&gt ver0.1.0 done</p>
+        <p class="description">{props.descrip}</p>
         <div class="projectBtnBar">
             <div>
                 <button class="btn" onclick={gitClick}>
                     <DiGithubBadge />
                 </button>
             </div>
-            <button class="btn">MoreInfo</button>
+            <button class="btn" disabled="disabled">MoreInfo</button>
         </div>
     </div>
 </main>
