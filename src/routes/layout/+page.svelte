@@ -52,7 +52,15 @@
 </script>
 
 <main>
-    <a href="/">/Tomi</a>
+    <div class="navbar">
+        <a role="button" class="btn" href="/">legal stuff</a>
+        <a role="button" class="btn" href="/blog">blog v0.0.1</a>
+        <div class="buttonNav">
+            <button on:click={handleJobs} class="btn btn-primary">my jobs</button>
+            <button on:click={handleProjects} class="btn btn-secondary">my projects</button>
+            <button on:click={handleSocials} class="btn btn-primary">my socials</button>
+        </div>
+    </div>
     <div class="contentSide">
         <div>
             {#if something}
@@ -79,14 +87,9 @@
                 </div>
             {/if}
         </div>
-        <div class="controlSide">
-            <div class="buttonNav">
-                <button on:click={handleJobs} class="btn btn-primary">my jobs</button>
-                <button on:click={handleProjects} class="btn btn-secondary">my projects</button>
-                <button on:click={handleSocials} class="btn btn-primary">my socials</button>
-            </div>
-        </div>
-    </div> 
+    </div>
+    <footer>
+    </footer> 
 </main>
 
 <style>
@@ -100,9 +103,6 @@
         height: 100vh;
     }
 
-    .controlSide {
-        justify-content: space-around;
-    }
 
     .contentSide {
         display: flex;
@@ -111,9 +111,19 @@
         justify-content: center;
     }
 
+    .navbar {
+        justify-content: space-between;   
+    }
+
     .buttonNav {
+        margin-right: 27%;
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
+    }
+
+    .buttonNav > *{
+        margin-right: 6vw;
+        max-width: fit-content;
     }
 
     .hero-holder {
