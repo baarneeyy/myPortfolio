@@ -28,22 +28,22 @@
                 <ProjectCard 
                     name="BottleBuddy" 
                     itemName="project"
-                    projectType="mobile app" 
-                    description="Wolt-like delivery&pickup app for plastic bottles"
+                    projectType="cross-platform service" 
+                    description="Wolt-like delivery&pickup app for plastic bottles."
                     checked="checked"
-                    repo="https://github.com/Baarneeyy/BottleBuddy"
-                    stack = 'react-expo-pocketbase'
-                    descrip="Develop & Implement Order screen -&gt ver0.1.0 done"
+                    repo="https://github.com/baarneeyy/svelteBuddy"
+                    stack = 'sveltekit-supabase'
+                    descrip="POC-v0.1.0 done; shelved atm"
                 
                 />
                 <ProjectCard 
                     name="Maestro" 
                     itemName="project"
                     projectType="web-app"
-                    description="Utility website '100 gadgets' style"
+                    description="Non-ai based personal assistant."
                     repo="https://github.com/Baarneeyy/maestro"
                     stack = 'svelte'
-                    descrip="Create unit converter"
+                    descrip="Not in active development"
                 />
             </div>
         </ul>
