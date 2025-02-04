@@ -1,38 +1,7 @@
 <script>
     import "../app.css";
 
-    export let showJobs = false;
-    export let showProjects = false;
-    export let showSocials = false;
     let element = null;
-    function handleJobs() {
-        showJobs = !showJobs;
-        showProjects = false;
-        showSocials = false;
-        element.classList.add('selected');
-        showSomething()
-    }
-
-    function handleProjects() {
-        showProjects = !showProjects;
-        showJobs = false;
-        showSocials = false;
-        showSomething()
-    }
-
-    function handleSocials() {
-        showSocials = !showSocials;
-        showJobs = false;
-        showProjects = false;
-        showSomething()
-    }
-
-    export let something = false;
-
-    export let showSomething = () => {
-        something = showJobs || showProjects || showSocials
-    };
-
 </script>
 
 <main>

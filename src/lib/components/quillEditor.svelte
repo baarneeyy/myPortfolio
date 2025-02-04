@@ -1,5 +1,13 @@
 <script>
     import { onMount } from 'svelte';
+    
+    /*
+        TODOS:
+            1. Learn quillJS from docs
+            2. Minimize functions in editor
+            3. Alongside modal.svelte -> create a message/mail sender
+    */
+    
     let editorContainer;
     let quill; // Declare quill to access it later if needed
 

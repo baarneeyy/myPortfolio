@@ -1,6 +1,11 @@
 <script>
   import QuillEditor from './quillEditor.svelte';
 
+  /*
+   TODOS:
+      1. remove/fix editor warnings in component file
+      2. create&implement this component as a working mail/message sender
+  */
   let { showModal = $bindable() } = $props();
 
   let dialog = $state(); //ModalElement

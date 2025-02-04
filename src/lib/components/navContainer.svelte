@@ -11,7 +11,10 @@
 
     import "../../app.css";
 
-    //TODO -> IMPLEMENT PROJECT FILTER/SEARCH
+    /*
+        TODO:
+            1. Create a more easily maintainable structure  
+    */
 
 </script>
 

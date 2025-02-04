@@ -12,6 +12,13 @@
 
     export let infoBtnIcon = '+'
 
+    //TODO - New modal implementation
+    /*
+        IDEAS:
+        1. convert all handleX() funcs into a singular func w switch stmnt
+        2. setup routing -> each handleX() into a separate +page.svelte
+    */
+
     function handleJobs() {
         showJobs = !showJobs;
         showProjects = false;
