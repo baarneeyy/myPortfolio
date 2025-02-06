@@ -12,6 +12,13 @@
             location.reload();
         }
     });
+    
 </script>
-
+<div>
+    <button>
+        <a href="/layout">Exit</a>
+    </button>
+    <button>Previous Post</button>
+    <button>Next Post</button>
+</div>
 {@render children()}
