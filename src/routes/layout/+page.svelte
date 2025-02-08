@@ -85,8 +85,9 @@
                     </div>
                 {/if}
             {:else}
-                <div class="hero-content hero-holder">
-                    <h1 transition:fade class="text-4xl md:text-5xl font-bold">i <s>(break)</s> make stuff</h1>
+                <div class="hero-content hero-holder" transition:fade>
+                    <h1 class="text-4xl md:text-5xl font-bold">Tomas Vsetecka</h1>
+                    <h1 class="text-4xl md:text-5xl font-bold">i <s>(break)</s> make stuff</h1>
                     <button on:click={handleInfo} class="btn btn-secondary">{infoBtnIcon}</button>
                     {#if showInfo}
                         <InfoCard />

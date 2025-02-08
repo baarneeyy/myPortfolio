@@ -10,6 +10,7 @@
     let showModal = $state(false);
 
     import "../../app.css";
+    import JobCard from "./cards/jobCard.svelte";
 
     /*
         TODO:
@@ -21,9 +22,7 @@
 <main>
     {#if props.jobs }
         <ul class="navContainer">
-            <li>
-                <a href="https://binaryconfidence.com">QA Lead @ Binary Confidence</a>
-            </li>
+            <JobCard />
         </ul>
     {:else if props.projects}
         <ul class="navContainer">
