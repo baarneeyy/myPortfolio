@@ -16,7 +16,8 @@
     /*
         IDEAS:
         1. convert all handleX() funcs into a singular func w switch stmnt
-        2. setup routing -> each handleX() into a separate +page.svelte
+        2. setup routing -> each handleX() into a separate +page.svelte?
+        3. design a way to keep my name on the screen somewhere/incorporate a logo
     */
 
     function handleJobs() {

@@ -1,9 +1,6 @@
 <script>
     import ProjectCard from "./projectCard.svelte";
-    import Modal from "./modal.svelte";
     import { fade } from "svelte/transition";
-    import GoInbox from 'svelte-icons/go/GoInbox.svelte';
-    import DiGithubBadge from 'svelte-icons/di/DiGithubBadge.svelte';
 
     let props = $props();
 
@@ -11,6 +8,7 @@
 
     import "../../app.css";
     import JobCard from "./cards/jobCard.svelte";
+    import SocialsCard from "./cards/socialsCard.svelte";
 
     /*
         TODO:
@@ -50,19 +48,7 @@
             </div>
         </ul>
     {:else if props.socials}
-        <div class="btnPair">
-            <a class="btn btn-secondary mr-4" role="button" href="https://github.com/Baarneeyy">
-                <DiGithubBadge/>
-            </a>
-            <button class="btn" disabled="disabled">github: u/Baarneey</button>
-        </div>
-        <div class="btnPair">
-            <button class="btn btn-secondary mr-4" onclick={() => (showModal = true)}>
-                <GoInbox/>
-            </button>
-            <button class="btn" disabled="disabled">mail: tomas@vsetecka.sk</button>
-        </div>
-        <Modal bind:showModal/>
+        <SocialsCard />
     {/if}
 </main>
 
