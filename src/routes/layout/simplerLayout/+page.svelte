@@ -2,6 +2,16 @@
     import ProjectCard from "$lib/components/projectCard.svelte"
     import JobCard from "$lib/components/cards/jobCard.svelte"
     import SocialsCard from "$lib/components/cards/SocialsCard.svelte"
+
+    /*
+        IDEA for userflow v0.1.0:
+        Main:
+            - user is on main page
+            - user clicks on '+' or other button
+            - name slides to left from center
+            - text i make(break) stuff disappears
+            --> switches with this layout
+    */
 </script>
 
 
