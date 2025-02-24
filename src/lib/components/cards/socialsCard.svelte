@@ -9,7 +9,7 @@
 </script>
 <div class="card bg-neutral text-neutral-content w-96">
     <div class="card-body items-center text-center">
-        <h2 class="card-title">Socials</h2>
+        <!--<h2 class="card-title">Socials</h2> -->
         <p>You can also find me here!</p>
         <div class="btnPair">
             <a class="btn btn-secondary mr-4" role="button" href="https://github.com/Baarneeyy">

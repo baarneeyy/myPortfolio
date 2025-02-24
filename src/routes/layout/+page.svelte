@@ -1,6 +1,6 @@
 <script>
-    import NavContainer from "../../lib/components/navContainer.svelte";
-    import InfoCard from "../../lib/components/infoCard.svelte";
+    import NavContainer from "$lib/components/navContainer.svelte";
+    import InfoCard from "$lib/components/infoCard.svelte";
     import { fade } from 'svelte/transition';
 
     import '@fontsource-variable/roboto-slab';

@@ -6,8 +6,12 @@
 
 <main>
     <div class="header">
-        <div>insert img l8r</div>
-        <a href="/layout/"> / New Layout</a>
+        <div class="avatar">
+            <div class="ring-secondary ring-offset-base-100 w-24 rounded-full ring ring-offset-2">
+                <img src="/profileComp.jpg" alt="profile pic hihi" />
+            </div>
+        </div>
+        <a href="/layout/dev" role="button" class="btn">Developer Portfolio</a>
     </div>
     <div class="text-3xl font-bold underline">Tomáš Všetečka</div>
     <div class="legalShit">
@@ -43,6 +47,13 @@
     .header {
         text-align: start;
         width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        
+    } 
+    .header > * {
+        margin-right: 3vw;
     }
 
 
