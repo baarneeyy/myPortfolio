@@ -56,6 +56,10 @@
         margin-right: 3vw;
     }
 
+    .avatar {
+        margin-top: 1vw;
+        margin-left: 1vw;
+    }
 
     main {
         display: flex;

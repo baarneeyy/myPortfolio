@@ -100,4 +100,9 @@
         line-height: 1;
         text-align: left;
     }
+
+    .avatar {
+        margin-top: 1vw;
+        margin-left: 1vw;
+    }
 </style>
